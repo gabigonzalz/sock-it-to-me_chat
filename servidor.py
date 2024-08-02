@@ -71,6 +71,7 @@ def manejar(cliente):
             
             else:
                 # El cliente salio de forma limpia
+                transmitir(f"{apodos.get(cliente, 'Desconocido')} salió de la conversación.".encode('utf-8'))
                 return False
             
         except socket.error as error:
